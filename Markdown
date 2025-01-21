@@ -18,3 +18,9 @@ If make a list with few blanks, it becomes a list inside list
 code
 ```
 is coding paragraph 
+
+표 만들기
+|title1|title2|title3|
+|-----|----|----|
+|element1|element2|element3|
+|element4|element5|element6|
