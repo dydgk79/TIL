@@ -73,3 +73,27 @@ new_dict = {
 서버에서 API 받아서 데이터로 사용하기
 pip install requests
 json 형식으로 받는데, 대부분 딕셔너리를 요소로 하는 리스트의 형태다. 이걸 잘 받아서 가공하여 쓰면 된다.
+
+# 2025.02.01
+딕셔너리로 이루어진 리스트에서, 딕셔너리의 밸류를 기준으로 정렬하는 법
+```python
+data = [
+    {
+        'name': 'Alex',
+        'age': 30,
+    },
+    {
+        'name': 'Brad',
+        'age': 25,
+    },
+    {
+        'name': 'Chad',
+        'age': 35,
+    },
+]
+result = sorted(data, key=lambda x:x['age'])
+# sorted(iterable, key=None, reverse=False)
+# sorted 함수의 key에 비교할 기준을 정하는 함수를 넣을 수 있다. 한번만 쓰므로 람다함수로 표현하는 것이 가독성에 좋을 것 같다.
+# 순환가능한 자료인 data를 정렬하는데, 정렬할 요소는 딕셔너리이다. key 뒤의 람다함수는 "정렬할 기준이 각 딕셔너리의 'age'라는 key로 접근하여 얻은 value이다." 라고 표현하는 것이다.
+# result는 오름차순으로 정렬되어 Brad, Alex, Chad 의 순서로 정렬될 것이다.
+```
