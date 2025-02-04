@@ -150,3 +150,63 @@ class MyClass: # 클래스 이름은 대문자로 띄어쓰기 구분하는 파�
 
 class_example_1 = MyClass('a', 'b')
 class_example_2 = MyClass(1, 2)
+
+
+# 2025.02.04
+# 클래스 상속
+class Parent:
+    def __init__(self):
+        pass
+class Child(Parent):
+    def __init__(self):
+        pass
+"""
+선언하는 문법은 위와 같다.
+부모가 가진 메서드, 클래스 변수를 상속받아 사용할 수 있다.
+원래 가진 기능을 그대로 사용하며 일부 기능을 추가하여 확장식으로 사용하는 등의 활용방법도 있다.
+"""
+
+# 메서드오버라이딩
+"""
+자식 클래스가 부모와 동일한 메서드 이름을 가진 메서드를 사용할 수 있다.
+이 경우 자식 클래스의 메서드가 우선 사용된다.
+인스턴스를 받는 메서드라면, 받는 인스턴스의 종류와 갯수도 같아야 한다.
+"""
+
+# 다중 상속
+class ParentA:
+    def __init__(self):
+        pass
+class ParentB:
+    def __init__(self):
+        pass
+class Child(ParentA, ParentB):
+    def __init__(self):
+        pass
+"""
+여러 클래스로부터 동시에 상속받을 수도 있다.
+먼저 상속받기로 선언된(위의 경우 ParentA) 클래스로부터 먼저 데이터를 찾기 시작한다.
+이를 MRO라고 한다.
+"""
+
+# super 메서드
+"""
+super() 메서드를 써서, MRO에 맞는 순서대로 계속 찾아가게 만들 수 있다.
+Child에서 super()를 시작했다고 가정하면, ParentA에서 찾는다. 여기에 또 super()가 있다면 ParentB를 찾으러 간다.
+ParentA에서 super()를 시작했다면 ParentA가 상속받은 클래스를 찾으러 간다. 그것이 MRO이니까. (최상위에 object라는 것이 있다고 한다.)
+"""
+
+# 예외 처리
+try:
+    pass
+except Exception:
+    pass
+else:
+    pass
+finally:
+    pass
+"""
+try 안의 코드를 수행하다가, except 뒤에 적어둔 에러를 만나면 그곳으로 넘어가서 코드를 수행한다.
+코드를 아예 멈추지 않고, 나머지 코드를 실행할 때 쓴다.
+else와 finally는 잘 사용하지 않기는 하다.
+"""
