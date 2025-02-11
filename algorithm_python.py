@@ -139,3 +139,11 @@ def selection_sort(a, n):
             if a[min_idx] > a[j]:
                 min_idx = j
         a[i], a[min_idx] = a[min_idx], a[i]
+
+# String
+
+## 문자열 뒤집기
+
+## 문자열 연산
+
+## for-else
