@@ -147,3 +147,18 @@ def selection_sort(a, n):
 ## 문자열 연산
 
 ## for-else
+
+## 패턴 매칭
+
+## KMP 알고리즘
+
+## 보이어-무어
+
+
+# Stack
+
+## 스택
+
+## 괄호 검사, function call
+
+## 재귀귀
